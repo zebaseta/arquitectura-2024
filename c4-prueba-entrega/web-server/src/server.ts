@@ -41,17 +41,3 @@ app.listen(port, () => {
     console.log(`API listening at http://localhost:${port}`);
 });
   
-
-//const main = () => {
-    //se genera palabras con faker
-//    const randomWords = Array.from({ length: 3}, () => faker.random.word());
-
-    //para cada palabra se activa el pipeline con el dato 
-  //  for (const word of randomWords) {
-    //    let dataToProcess: CustomData = {data: word}
-      //  pipeline.processInput(dataToProcess);        
-   // }
-    
-//};
-
-//main();

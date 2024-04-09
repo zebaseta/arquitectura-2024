@@ -1,17 +1,17 @@
-// src/sendData.ts
 import axios from 'axios';
+import { CustomData } from './data-structure/CustomData'
+
 const faker = require('faker'); // o import faker from 'faker';
 
 
 const sendData = async () => {
-  const userData = {
-    name: faker.name.findName(),
-    email: faker.internet.email(),
-  };
-
   try {
-    const response = await axios.post('http://localhost:3000/words', userData);
-    console.log('Data sent successfully:', response.data);
+    const randomWords = Array.from({ length: 3}, () => faker.random.word());
+    for (const word of randomWords) {
+      let dataToProcess: CustomData = {data: word}
+      const response = await axios.post('http://localhost:3000/words', dataToProcess);
+      console.log('Data sent successfully:', response.data);
+    }
   } catch (error) {
     if (axios.isAxiosError(error)) {
       if (error.response) {
