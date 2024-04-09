@@ -8,7 +8,7 @@ El Pipeline implementado trata de ser agnóstico a la teconología de colas, par
 ## Estructura de archivos
 ```bash
 src\
-----\data-structure #guarda el CustoData que va a ser la estructura del dato que ingresa a la Pipeline
+----\data-structure #guarda el CustomData que va a ser la estructura del dato que ingresa a la Pipeline
 ----\filters #guarda el archivo en que se definen los filtros
 ----\pipeline #guarda el curpo del algoritmo de la clase Pipeline y la QueueFactory encargada de crear las Queues Bull o Rabbit
 ----\queues-providers #guarda los Adaptadores de Bull y Rabbit ademas de la IQueue que es la interface que van a implementar dichos adaptadores

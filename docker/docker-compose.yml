@@ -2,7 +2,7 @@ version: "3.7"
 services: 
     redis:
         container_name: redis
-        image: redis:7.2.4
+        image: redis:latest
         ports:
             - 6379:6379
         volumes:
@@ -10,10 +10,17 @@ services:
         command: [ "redis-server"]
     rabbitmq:
         container_name: rabbitmq
-        image: rabbitmq:3.13.1-alpine
+        image: rabbitmq:3.13.1-management
         ports:
             - 5672:5672
             - 15672:15672        
+        environment:
+          RABBITMQ_DEFAULT_USER: "user"
+          RABBITMQ_DEFAULT_PASS: "password"
         volumes:
             - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
             - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+volumes: 
+  redis-data:
+  rabbitmq_data:
+  rabbitmq_log:
