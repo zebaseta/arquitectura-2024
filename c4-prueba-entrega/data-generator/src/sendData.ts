@@ -18,7 +18,7 @@ const sendData = async () => {
           if (error.response) {// status != 2xx
             console.error('Error response data:', error.response.data);
             console.error('Error response status:', error.response.status);
-          } else if (error.request) {// without response (timeout)            
+          } else if (error.request) {// without response (timeout            
             console.error('Error request:', error.request);
           } else { // other error                        
             console.error('Error message:', error.message);
