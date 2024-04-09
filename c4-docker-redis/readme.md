@@ -1,5 +1,6 @@
 Arquitectura
 
+
 ### Teoría de Docker
 
 Docker es una plataforma de contenedorización que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores. Los contenedores son ligeros, portátiles y brindan un entorno consistente para la aplicación, independientemente del entorno de ejecución. Esto simplifica el desarrollo, las pruebas y la implementación.
