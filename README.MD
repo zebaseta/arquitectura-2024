@@ -19,13 +19,14 @@
 Este es un ejemplo de cómo incluir un diagrama PlantUML en un archivo Markdown para que se vea correctamente renderizado en GitHub.
 
 ```plantuml
-@startuml
-!define Component(name, desc) class name << (C,#FF7700) >> {
-  desc
-}
+  @startuml
 
-Component(NoSeComoIr, "NoSeComoIr")
-@enduml
+      Juan -> Paco: saluda
+      Juan <-- Paco: responde
+      Juan -> Jesús: saluda
+      Juan <-- Jesús: responde
+
+  @enduml
 
 
 
