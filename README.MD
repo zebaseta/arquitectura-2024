@@ -14,19 +14,22 @@
     b. Correr directamente      => npx ts-node archivo.ts
 
 
-# Diagrama PlantUML en GitHub
+Regular **Markdown** here.
 
-Este es un ejemplo de cómo incluir un diagrama PlantUML en un archivo Markdown para que se vea correctamente renderizado en GitHub.
+<div hidden>
+```
+@startuml firstDiagram
 
-```plantuml
-  @startuml
+Alice -> Bob: Hello
+Bob -> Alice: Hi!
+		
+@enduml
+```
+</div>
 
-      Juan -> Paco: saluda
-      Juan <-- Paco: responde
-      Juan -> Jesús: saluda
-      Juan <-- Jesús: responde
+![](firstDiagram.svg)
 
-  @enduml
+Some more markdown.
 
 
 
