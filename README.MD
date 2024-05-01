@@ -30,6 +30,22 @@ Bob -> Alice: Hi!
 
 </details>
 
+$ plantuml -t svg README.md
+
+$ plantuml --version
+PlantUML version 1.2023.11 (Thu Sep 14 03:26:33 JST 2023)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: JP
+
+PLANTUML_LIMIT_SIZE: 4096
+
+Dot version: dot - graphviz version 9.0.0 (20230911.1827)
+Installation seems OK. File generation OK
+
 
 
 
