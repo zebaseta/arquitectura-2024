@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  ejemplo-mysql-container:
+    build:
+      context: .
+    depends_on:
+      - mysql-db
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASS=secret
+      - DB_NAME=example1
+      - DB_DIALECT=mysql
+    networks:
+      - ejemplo-mysql
+
+  mysql-db:
+    image: mysql
+    container_name: mysql_example
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=example1
+    ports:
+      - "3306:3306"
+    networks:
+      - ejemplo-mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+
+networks:
+  ejemplo-mysql:
