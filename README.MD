@@ -16,15 +16,16 @@
 
 Regular **Markdown** here.
 
-<div hidden>
-```
+<!--
 @startuml firstDiagram
 
 Alice -> Bob: Hello
 Bob -> Alice: Hi!
-		
+	
 @enduml
-```
+-->
+
+![](firstDiagram.svg)
 </div>
 
 ![](firstDiagram.svg)
