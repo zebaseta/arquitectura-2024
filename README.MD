@@ -1,5 +1,3 @@
-```
-
 1. Crear un proyecto nuevo:
     a. Pasos previos: 
         a1. Instala node        => https://nodejs.org/en/download/
@@ -16,18 +14,18 @@
     b. Correr directamente      => npx ts-node archivo.ts
 
 
+# Diagrama PlantUML en GitHub
+
+Este es un ejemplo de cómo incluir un diagrama PlantUML en un archivo Markdown para que se vea correctamente renderizado en GitHub.
+
+```plantuml
 @startuml
-actor client
-node app
-node car
-node tshirt
+!define Component(name, desc) class name << (C,#FF7700) >> {
+  desc
+}
 
-car -> app
-app -> client
-client -> tshirt
+Component(NoSeComoIr, "NoSeComoIr")
 @enduml
-
-```
 
 
 
