@@ -1,3 +1,5 @@
+```
+
 1. Crear un proyecto nuevo:
     a. Pasos previos: 
         a1. Instala node        => https://nodejs.org/en/download/
@@ -24,6 +26,8 @@ car -> app
 app -> client
 client -> tshirt
 @enduml
+
+```
 
 
 
