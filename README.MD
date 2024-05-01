@@ -16,21 +16,19 @@
 
 Regular **Markdown** here.
 
-<!--
+![[firstDiagram.png]]
+<details>
+
+```
 @startuml firstDiagram
 
 Alice -> Bob: Hello
 Bob -> Alice: Hi!
-	
+		
 @enduml
--->
+```
 
-![](firstDiagram.svg)
-</div>
-
-![](firstDiagram.svg)
-
-Some more markdown.
+</details>
 
 
 
