@@ -16,7 +16,7 @@
 
 Regular **Markdown** here.
 
-![[firstDiagram.png]]
+![Primer Diagrama](firstDiagram.png)
 <details>
 
 ```
