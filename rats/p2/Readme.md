@@ -49,29 +49,28 @@ MONGO_URI=mongodb://root:secret@localhost:27017/admin
 PORT=3001
 
 
-## Correr docker para rabbitmq y redis
+## Correr docker para mysql, mongodb y redis
 
 - `cd docker`
 - Ejecutar `docker compose up -d` si el container no existe o `docker-compose start -d` si el container ya exister
 
-## Para ejecutar los repositorios
 
-### Web Server
-
+### Correr Web Server A
 ```bash
-$ cd manage-data-server
+$ cd web-server-a
 $ npm start
 ```
 
-### Data Generator
-
-Aclaracion: Hay que tener el Web Server prendido con antelacion para ejecutar este script
-
+### Correr Web Server B
 ```bash
-$ cd view-data-server
+$ cd web-server-b
 $ npm start
 ```
 
-### Ouput
+### PRUEBAS
 
-El resultado de cada persona que atravesiesa el conjunto de validaciones, se imprime tanto en pantalla, como también en el archivo llamado filters.log, dentro del proyecto web-server
+En la carpeta postman-collection se encuentra una colección de postman que le pega a ambos servicios:
+
+Existe una pegada para crear un cliente en el servicio A, esto guarda el mismo en MySql y Redis, en el Servicio A, y lo envia por una cola de Bull (redis) hacia el servivio B, el cual lo guarda en una base de Mongo. 
+
+Luego existen pegadas para obtener cliente en ambos servivios
