@@ -1,0 +1,24 @@
+{
+  "name": "web-server-b",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "scripts": {   
+    "start": "npx ts-node src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bull": "^4.12.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}
